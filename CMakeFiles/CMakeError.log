@@ -133,3 +133,498 @@ int main(void)
   return 0;
 }
 
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d049e/fast && /usr/bin/make  -f CMakeFiles/cmTC_d049e.dir/build.make CMakeFiles/cmTC_d049e.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d049e.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_d049e.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d049e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d049e.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_d049e.dir/src.cxx.o -o cmTC_d049e 
+CMakeFiles/cmTC_d049e.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d049e.dir/build.make:105: recipe for target 'cmTC_d049e' failed
+make[1]: *** [cmTC_d049e] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_d049e/fast' failed
+make: *** [cmTC_d049e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_29455/fast && /usr/bin/make  -f CMakeFiles/cmTC_29455.dir/build.make CMakeFiles/cmTC_29455.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29455.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_29455.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29455
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29455.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_29455.dir/src.cxx.o -o cmTC_29455 
+CMakeFiles/cmTC_29455.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_29455.dir/build.make:105: recipe for target 'cmTC_29455' failed
+make[1]: *** [cmTC_29455] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_29455/fast' failed
+make: *** [cmTC_29455/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5ef12/fast && /usr/bin/make  -f CMakeFiles/cmTC_5ef12.dir/build.make CMakeFiles/cmTC_5ef12.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ef12.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_5ef12.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5ef12
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ef12.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_5ef12.dir/src.cxx.o -o cmTC_5ef12 
+CMakeFiles/cmTC_5ef12.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5ef12.dir/build.make:105: recipe for target 'cmTC_5ef12' failed
+make[1]: *** [cmTC_5ef12] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_5ef12/fast' failed
+make: *** [cmTC_5ef12/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_72924/fast && /usr/bin/make  -f CMakeFiles/cmTC_72924.dir/build.make CMakeFiles/cmTC_72924.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_72924.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_72924.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_72924
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72924.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_72924.dir/src.cxx.o -o cmTC_72924 
+CMakeFiles/cmTC_72924.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_72924.dir/build.make:105: recipe for target 'cmTC_72924' failed
+make[1]: *** [cmTC_72924] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_72924/fast' failed
+make: *** [cmTC_72924/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e272e/fast && /usr/bin/make  -f CMakeFiles/cmTC_e272e.dir/build.make CMakeFiles/cmTC_e272e.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e272e.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_e272e.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e272e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e272e.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_e272e.dir/src.cxx.o -o cmTC_e272e 
+CMakeFiles/cmTC_e272e.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e272e.dir/build.make:105: recipe for target 'cmTC_e272e' failed
+make[1]: *** [cmTC_e272e] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_e272e/fast' failed
+make: *** [cmTC_e272e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_93660/fast && /usr/bin/make  -f CMakeFiles/cmTC_93660.dir/build.make CMakeFiles/cmTC_93660.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_93660.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_93660.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_93660
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93660.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_93660.dir/src.cxx.o -o cmTC_93660 
+CMakeFiles/cmTC_93660.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_93660.dir/build.make:105: recipe for target 'cmTC_93660' failed
+make[1]: *** [cmTC_93660] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_93660/fast' failed
+make: *** [cmTC_93660/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d97ac/fast && /usr/bin/make  -f CMakeFiles/cmTC_d97ac.dir/build.make CMakeFiles/cmTC_d97ac.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d97ac.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_d97ac.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d97ac
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d97ac.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_d97ac.dir/src.cxx.o -o cmTC_d97ac 
+CMakeFiles/cmTC_d97ac.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d97ac.dir/build.make:105: recipe for target 'cmTC_d97ac' failed
+make[1]: *** [cmTC_d97ac] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_d97ac/fast' failed
+make: *** [cmTC_d97ac/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_150af/fast && /usr/bin/make  -f CMakeFiles/cmTC_150af.dir/build.make CMakeFiles/cmTC_150af.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_150af.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_150af.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_150af
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_150af.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_150af.dir/src.cxx.o -o cmTC_150af 
+CMakeFiles/cmTC_150af.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_150af.dir/build.make:105: recipe for target 'cmTC_150af' failed
+make[1]: *** [cmTC_150af] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_150af/fast' failed
+make: *** [cmTC_150af/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_db12d/fast && /usr/bin/make  -f CMakeFiles/cmTC_db12d.dir/build.make CMakeFiles/cmTC_db12d.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_db12d.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_db12d.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_db12d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db12d.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_db12d.dir/src.cxx.o -o cmTC_db12d 
+CMakeFiles/cmTC_db12d.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_db12d.dir/build.make:105: recipe for target 'cmTC_db12d' failed
+make[1]: *** [cmTC_db12d] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_db12d/fast' failed
+make: *** [cmTC_db12d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c569f/fast && /usr/bin/make  -f CMakeFiles/cmTC_c569f.dir/build.make CMakeFiles/cmTC_c569f.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c569f.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_c569f.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c569f
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c569f.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_c569f.dir/src.cxx.o -o cmTC_c569f 
+CMakeFiles/cmTC_c569f.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c569f.dir/build.make:105: recipe for target 'cmTC_c569f' failed
+make[1]: *** [cmTC_c569f] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_c569f/fast' failed
+make: *** [cmTC_c569f/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7d1b2/fast && /usr/bin/make  -f CMakeFiles/cmTC_7d1b2.dir/build.make CMakeFiles/cmTC_7d1b2.dir/build
+make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7d1b2.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_7d1b2.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7d1b2
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d1b2.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_7d1b2.dir/src.cxx.o -o cmTC_7d1b2 
+CMakeFiles/cmTC_7d1b2.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7d1b2.dir/build.make:105: recipe for target 'cmTC_7d1b2' failed
+make[1]: *** [cmTC_7d1b2] Error 1
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_7d1b2/fast' failed
+make: *** [cmTC_7d1b2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
