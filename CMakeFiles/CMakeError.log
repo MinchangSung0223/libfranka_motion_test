@@ -628,3 +628,50 @@ int main(void)
   return 0;
 }
 
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_888c1/fast && make[1]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_888c1.dir/build.make CMakeFiles/cmTC_888c1.dir/build
+make[2]: Entering directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_888c1.dir/src.cxx.o
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_888c1.dir/src.cxx.o -c /root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_888c1
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_888c1.dir/link.txt --verbose=1
+/usr/bin/c++  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_888c1.dir/src.cxx.o -o cmTC_888c1 
+CMakeFiles/cmTC_888c1.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_888c1.dir/build.make:105: recipe for target 'cmTC_888c1' failed
+make[2]: *** [cmTC_888c1] Error 1
+make[2]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_888c1/fast' failed
+make[1]: *** [cmTC_888c1/fast] Error 2
+make[1]: Leaving directory '/root/workspace/libfranka_workspace/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
